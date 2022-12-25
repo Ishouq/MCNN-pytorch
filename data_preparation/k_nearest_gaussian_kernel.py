@@ -1,6 +1,7 @@
 import numpy as np
 import scipy
 import scipy.io as io
+from scipy import spatial
 from scipy.ndimage.filters import gaussian_filter
 import os
 import glob
@@ -57,11 +58,11 @@ def gaussian_filter_density(img,points):
 # test code
 if __name__=="__main__":
     # show an example to use function generate_density_map_with_fixed_kernel.
-    root = 'D:\\workspaceMaZhenwei\\GithubProject\\Crowd_counting_from_scratch\\data'
+    root = '/content/MCNN-pytorch'
     
     # now generate the ShanghaiA's ground truth
-    part_A_train = os.path.join(root,'part_A_final/train_data','images')
-    part_A_test = os.path.join(root,'part_A_final/test_data','images')
+    part_A_train = os.path.join(root,'/content/drive/MyDrive/ShanghaiTech/part_A/train_data','images')
+    part_A_test = os.path.join(root,'/content/drive/MyDrive/ShanghaiTech/part_A/test_data','images')
     # part_B_train = os.path.join(root,'part_B_final/train_data','images')
     # part_B_test = os.path.join(root,'part_B_final/test_data','images')
     path_sets = [part_A_train,part_A_test]
